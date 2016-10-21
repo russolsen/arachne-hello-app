@@ -57,8 +57,11 @@ Finally you need to start up your application in your main program:
     
         (component/start rt)))
 
-Note that the second argument to `arachne/build-config` 
+There are a couple things to note about the code above:
+
+ * The second argument to `arachne/build-config` 
 is a vector of module ids used by the application -- `:org.arachne-framework/hello-module` in the example.
-Note that this is the id of the _module_ not the id you gave the components in your config file.
-In contrast, when you build the runtime with `arachne/runtime` you pass in the component id -- the
+This is the id of the _module_ not the id you gave the components in your config file.
+
+* In contrast, when you build the runtime with `arachne/runtime` you pass in the component id -- the
 one you configured in your application config -- of your runtime component.
