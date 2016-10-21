@@ -8,7 +8,7 @@
   (let [cfg (arachne/build-config
               [:org.arachne-framework/hello-module]
               config-file)
-        rt (arachne/runtime cfg :arachne_hello_app/runtime)]
+        rt (arachne/runtime cfg :arachne-hello-app/runtime)]
 
     (component/start rt)))
 
@@ -21,7 +21,7 @@
              "config/hello.clj"))
 
   (def rt (atom
-            (arachne/runtime cfg :arachne_hello_app/runtime)))
+            (arachne/runtime cfg :arachne-hello-app/runtime)))
 
   (swap! rt component/start)
   (swap! rt component/stop)

@@ -18,7 +18,7 @@ To add a new module -- `hello-module` for example -- to your application you nee
 
 Add a reference to the module in your `project.clj`. This just an ordinary lein dependancy:
 
-    (defproject arachne_hello_app "0.1.0-SNAPSHOT"
+    (defproject arachne-hello-app "0.1.0-SNAPSHOT"
       :dependencies [[org.clojure/clojure "1.9.0-alpha13"]
                      [org.arachne-framework/hello-module "0.1.0"]
     ;; etc..
@@ -32,13 +32,13 @@ simple:
     (require '[arachne.core.dsl :as core])
     (require '[arachne.hello :as hello])
 
-    (core/runtime :arachne_hello_app/runtime [:arachne_hello_app/spanish :arachne_hello_app/informal])
+    (core/runtime :arachne-hello-app/runtime [:arachne-hello-app/spanish :arachne-hello-app/informal])
 
-    (hello/greeter :arachne_hello_app/spanish "Hola")
-    (hello/greeter :arachne_hello_app/informal "Dude!")
+    (hello/greeter :arachne-hello-app/spanish "Hola")
+    (hello/greeter :arachne-hello-app/informal "Dude!")
 
-In the code above we are setting up a runtime called `:arachne_hello_app/runtime` that uses
-two components, `:arachne_hello_app/spanish` and `:arachne_hello_app/informal`.
+In the code above we are setting up a runtime called `:arachne-hello-app/runtime` that uses
+two components, `:arachne-hello-app/spanish` and `:arachne-hello-app/informal`.
 
 ### Start Your Application With the Module
 
@@ -52,7 +52,7 @@ Finally you need to start up your application in your main program:
       "Application entry point"
       [config-file & _]
       (let [cfg (arachne/build-config [:org.arachne-framework/hello-module] config-file)
-                 rt (arachne/runtime cfg :arachne_hello_app/runtime)]
+                 rt (arachne/runtime cfg :arachne-hello-app/runtime)]
     
         (component/start rt)))
 

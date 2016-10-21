@@ -2,7 +2,7 @@
 (require '[arachne.hello :as hello])
 
 
-(core/runtime :arachne_hello_app/runtime [:arachne_hello_app/spanish :arachne_hello_app/informal])
+(core/runtime :arachne-hello-app/runtime [:arachne-hello-app/spanish :arachne-hello-app/informal])
 
-(hello/greeter :arachne_hello_app/spanish "Hola")
-(hello/greeter :arachne_hello_app/informal "Dude!")
+(hello/greeter :arachne-hello-app/spanish "Hola")
+(hello/greeter :arachne-hello-app/informal "Dude!")
