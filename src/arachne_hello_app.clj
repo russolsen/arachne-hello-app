@@ -2,7 +2,6 @@
   (:require [arachne.core :as arachne]
             [com.stuartsierra.component :as component]))
 
-;; In a main function
 (defn -main
   "Application entry point"
   [config-file & _]
