@@ -40,7 +40,7 @@ simple:
 In the code above we are setting up a runtime called `:arachne-hello-app/runtime` that uses
 two components, `:arachne-hello-app/spanish` and `:arachne-hello-app/informal`.
 
-### Start Your Application With the Module
+### Write the Code to Start Your Application With the Module
 
 Finally you need to start up your application in your main program:
 
@@ -58,9 +58,21 @@ Finally you need to start up your application in your main program:
 
 There are a couple things to note about the code above:
 
- * The second argument to `arachne/build-config` 
+ * The first argument to `arachne/build-config` 
 is a vector of module ids used by the application -- `:org.arachne-framework/hello-module` in the example.
 This is the id of the _module_ not the id you gave the components in your config file.
 
 * In contrast, when you build the runtime with `arachne/runtime` you pass in the component id -- the
 one you configured in your application config -- of your runtime component.
+
+
+### Finally, Actually Run Your Application
+
+Notice that the `-main` function you wrote above requires an Arachne Config File as an argument. You can call main from the REPL, passing in the String `"config/hello.clj"` to run your application. Or you can run your application using Leiningen from the command line:
+
+`lein run "config/hello.clj"`
+
+You should see the following output print to `stdout`:
+
+`Dude!
+Hola`

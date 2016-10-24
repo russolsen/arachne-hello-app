@@ -14,4 +14,6 @@
                  [org.slf4j/log4j-over-slf4j "1.7.12"]
                  ]
 
+  :main arachne-hello-app
+
   :repositories [["arachne-dev" "http://maven.arachne-framework.org/artifactory/arachne-dev"]])
