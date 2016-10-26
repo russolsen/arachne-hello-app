@@ -52,8 +52,7 @@ Finally you need to start up your application in your main program:
       "Application entry point"
       [config-file & _]
       (let [cfg (arachne/build-config [:org.arachne-framework/hello-module] config-file)
-                 rt (arachne/runtime cfg :arachne-hello-app/runtime)]
-    
+            rt (arachne/runtime cfg :arachne-hello-app/runtime)]
         (component/start rt)))
 
 There are a couple things to note about the code above:
