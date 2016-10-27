@@ -69,7 +69,7 @@ one you configured in your application config -- of your runtime component.
 
 Notice that the `-main` function you wrote above requires an Arachne Config File as an argument. You can call main from the REPL, passing in the String `"config/hello.clj"` to run your application. Or you can run your application using Leiningen from the command line:
 
-`lein run "config/hello.clj"`
+`lein run config/hello.clj`
 
 You should see the following output print to `stdout`:
 

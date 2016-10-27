@@ -9,7 +9,6 @@
               [:org.arachne-framework/hello-module]
               config-file)
         rt (arachne/runtime cfg :arachne-hello-app/runtime)]
-
     (component/start rt)))
 
 
